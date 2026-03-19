@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    height: 750vh
+}
+
+.Bandeau {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    background-color: rgb(169, 199, 255);
+    position: fixed;
+    z-index: 9999999; /* Pour que le bandeau passe au dessus de tout (1er plan) */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-left: 10rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.Info_bandeau{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: left;
+    margin-left: 1rem;
+}
+
+.rectangle{
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-image: url("image/image\ montagne.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Bandeau_gris{
+    height: 80px;
+    width: 30%;
+    border-radius: 10px;
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+    opacity: 80%;
+}
+
+.boutton {
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    border: 0;
+
+    margin-left: 5%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    line-height: 2.5;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boutton:hover {
+    background: linear-gradient(rgb(73, 73, 73),rgb(0, 0, 0));
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.fond{
+    background-color: rgb(229, 238, 255);
+    min-height: 136rem;
+    width: 100%;
+}
+
+.titre{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+
+.MOI{
+    display: flex;
+    justify-content: left;
+}
+
+.Cadre_1{
+    min-height: 10%;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+    display: flex;
+    text-align: justify;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 2px solid rgb(3, 53, 85);
+    padding: 15px;
+    padding-left: 5px;
+}
+
+.CV{
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 20px;
+    font-weight: 0;
+    margin-left: 10px;
+}
+
+.Présentation{
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 3rem;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+}
+
+.fond2{
+    background: linear-gradient(rgb(63, 63, 255), rgb(117, 117, 255));
+    height: 94vh;
+}
+
+.titre2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Les spécificités des cartes "flip-cards" */
+
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    font-size: 140%;
+}
+
+.flip-card {
+    margin: 2rem;
+    background-color: transparent;
+    width: 20rem;
+    height: 25rem;
+    border: 0.2rem solid #000000;
+    border-radius: 6%;
+    perspective: 1000px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.flip-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 5%;
+}
+
+.flip-card-front {
+    justify-items: center;
+    background-color: #c5c5c5;
+    color: black;
+    align-items: center;
+    padding-top: 6rem;
+    font-size: 200%;
+}
+
+.flip-card-back {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    transform: rotateY(180deg);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    justify-content: center;
+    font-size: 80%;
+}
+
+.langue {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+
+.langue img {
+    height: auto;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+}
+
+.langue p {
+    margin-right: 0.5rem;
+    margin-top: 2rem;
+    font-size: 110%;
+}
+
+.fond3{
+    background-color: rgb(229, 238, 255);
+    min-height: 150vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+
+.titre3{
+    font-size: 2.5rem;
+}
+
+/* les spécificités du scroll de la navbar (vitesse du scroll, espaces, ...) */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section{
+    scroll-margin-top: 4rem; /* adapte le scroll à la hauteur du bandeau */
+}
+
+/* les spécificités de l'effet d'apparition "slidein" (Prénom et nom début de page) */
+
+@keyframes slidein {
+  from {
+    margin-left: 80%;
+    width: 30%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 30%;
+  }
+}
+
+li {
+    margin-left: 2rem;
+}
+
+
+
+
+
+
+.timeline {
+    position: relative;
+    max-width: 56.2rem;
+    margin: 70px auto;
+}
+
+/* ligne verticale */
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: rgb(3, 53, 85);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* bloc expérience */
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+}
+
+/* bulles */
+.timeline-item .content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(3, 53, 85);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* position gauche */
+.timeline-item.left {
+    left: 0;
+    text-align: left;
+}
+
+/* position droite */
+.timeline-item.right {
+    left: 28rem;
+}
+
+/* points sur la ligne */
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: -12px;
+    background-color: white;
+    border: 3px solid rgb(3, 53, 85);
+    top: 60px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item.right::after {
+    left: -10px;
+}
+
+.timeline-item.image{
+    border-radius: 20%;
+    border: 3px solid #000000;
+
+}
+
+
+.fond4{
+    background: linear-gradient(rgb(63, 63, 255), rgb(117, 117, 255));
+    min-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+
+.titre4{
+    font-size: 2.5rem;
+    color: white;
+}
