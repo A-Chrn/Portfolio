@@ -245,7 +245,7 @@ body {
 
 .fond3{
     background-color: rgb(229, 238, 255);
-    min-height: 150vh;
+    min-height: 85rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
     padding-top: 2rem;
@@ -357,7 +357,6 @@ li {
     border: 3px solid #000000;
 
 }
-
 
 .fond4{
     background: linear-gradient(rgb(63, 63, 255), rgb(117, 117, 255));
