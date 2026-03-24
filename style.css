@@ -371,3 +371,9 @@ li {
     font-size: 2.5rem;
     color: white;
 }
+
+.texte{
+    color: white;
+    font-size: 120%;
+    padding: 2rem;
+}
